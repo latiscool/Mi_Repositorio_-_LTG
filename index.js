@@ -71,7 +71,7 @@ const requestListener = async (req, res) => {
         res.end(JSON.stringify(respuesta));
       } catch (error) {
         res.statusCode = 500;
-        res.end('Ha oucrrido un error: ' + error);
+        res.end('Ha ocurrido un error: ' + error);
       }
     });
   }
@@ -82,10 +82,10 @@ const requestListener = async (req, res) => {
       let { id } = url.parse(req.url, true).query;
       await eliminarCancion(id);
       res.statusCode = 201;
-      res.end('Cancion Eliminado');
+      res.end('Cancion Eliminada');
     } catch (error) {
       res.statusCode = 500;
-      res.end('Ha oucrrido un error: ' + error);
+      res.end('Ha ocurrido un error: ' + error);
     }
   }
   //FIN ()
